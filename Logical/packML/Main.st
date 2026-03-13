@@ -1,0 +1,53 @@
+
+PROGRAM _INIT
+	(* Insert code here *)
+	
+	PACK_ML := CLEARING;
+	 
+END_PROGRAM
+
+PROGRAM _CYCLIC
+	(* Insert code here *)
+	CASE PACK_ML
+		ABORTING:
+		
+		ABORTED:
+		
+		CLEARING:
+		
+		STOPPING:
+		
+		STOPPED:
+		
+		RESETTING:
+		
+		IDLE:
+		
+		STARTING:
+		
+		EXECUTE:
+		
+		SUSPENDING:
+		
+		SUSPENDED:
+		
+		UNSUSPENDING:
+		
+		HOLDING:
+		
+		HELD:
+		
+		UNHOLDING:
+		
+		COMPLETING:
+		
+		COMPLETED:
+		
+		END_CASE
+END_PROGRAM
+
+PROGRAM _EXIT
+	(* Insert code here *)
+	 
+END_PROGRAM
+

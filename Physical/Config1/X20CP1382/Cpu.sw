@@ -6,5 +6,6 @@
   <TaskClass Name="Cyclic#3" />
   <TaskClass Name="Cyclic#4">
     <Task Name="Program" Source="Program.prg" Memory="UserROM" Language="ANSIC" Debugging="true" />
+    <Task Name="packML" Source="packML.prg" Memory="UserROM" Language="IEC" Debugging="true" />
   </TaskClass>
 </SwConfiguration>
