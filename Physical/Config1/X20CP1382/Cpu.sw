@@ -8,4 +8,11 @@
     <Task Name="Program" Source="Program.prg" Memory="UserROM" Language="ANSIC" Debugging="true" />
     <Task Name="packML" Source="packML.prg" Memory="UserROM" Language="IEC" Debugging="true" />
   </TaskClass>
+  <TaskClass Name="Cyclic#5" />
+  <TaskClass Name="Cyclic#6" />
+  <TaskClass Name="Cyclic#7" />
+  <TaskClass Name="Cyclic#8" />
+  <Libraries>
+    <LibraryObject Name="CppLibs" Source="Libraries.CppLibs.lby" Memory="None" Language="ANSIC" Debugging="true" />
+  </Libraries>
 </SwConfiguration>

@@ -2,6 +2,9 @@ VAR
 	BELT_START : BOOL; (*I1*)
 	BELT_DIR : BOOL; (*I2*)
 	BELT_CONST_SPEED : BOOL; (*I5*)
-	BELT_DEACC : INT; (*I4*)
-	BELT_ACC : INT; (*I3*)
+	BELT_SPEED : REAL; (*Belt speed target*)
+	_BELT_CURRENT_SPEED_ : REAL; (*Current belt speed*)
+	_BELT_ACCELERATION_ : INT; (*Acceleration to belt speed target*)
+	_BELT_DEACC_ : INT; (*I4*)
+	_BELT_ACC_ : INT; (*I3*)
 END_VAR
