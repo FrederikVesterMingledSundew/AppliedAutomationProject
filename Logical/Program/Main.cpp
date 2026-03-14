@@ -4,13 +4,16 @@
 	#include <AsDefault.h>
 #endif
 
-#include <math.h>
+#include <cmath>
 #include <string>
-//#include "myStdLib.h"
 #include <vector>
+#include <map>
+#include "../Libraries/CppLibs/myStdLib.h"
+//#include <myStdLib.h>
 
 #define INDIFFERENT_SPEED_DIFF 0.5 // [m/s]
 
+std::vector<double> something(50);
 
 // amount of memory to be allocated for heap storage must be specified for every ANSI C++ program with the bur_heap_size variable
 unsigned long bur_heap_size = 0xFFFF; 
@@ -62,7 +65,7 @@ void _CYCLIC ProgramCyclic(void)
 		_BELT_ACC_ = 0;
 		_BELT_DEACC_ = 0;
 	}
-
+	
 }
 
 void _EXIT ProgramExit(void)
