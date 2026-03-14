@@ -21,11 +21,11 @@ unsigned long bur_heap_size = 0xFFFF;
 void _INIT ProgramInit(void)
 {
 	// Insert code here 
-	int PeriodInHz = 100;
-	PWM_PERIOD = (1/PeriodInHz)*1000000;
+	double PeriodInHz = 100.0;
+	PWM_PERIOD = static_cast<int>((1/PeriodInHz)*1000000);
 	
 	BELT_START = true;
-	BELT_DIR = false;
+	
 	BELT_CONST_SPEED = false; //Hvis du flipper den her, kan du styre hastigheden på inverteren
 }
 
@@ -33,6 +33,18 @@ void _CYCLIC ProgramCyclic(void)
 {
 	// Insert code here 
 	if( !BELT_CONST_SPEED ) {
+		
+		if(BELT_SPEED < 0) {
+			BELT_DIR = true;
+			BELT_START = true;
+		}
+		else if(BELT_SPEED > 0) {
+			BELT_DIR = false;
+			BELT_START = true;
+		}
+		else {
+			BELT_START = false;
+		}
 		
 		if(fabs(BELT_SPEED - _BELT_CURRENT_SPEED_) > INDIFFERENT_SPEED_DIFF) {
 			
