@@ -27,7 +27,6 @@
       <Parameter ID="InaNodeNumber" Value="0" />
     </Connector>
     <Parameter ID="ConfigurationID" Value="testFreq_Config1" />
-    <Parameter ID="Simulation" Value="1" />
   </Module>
   <Module Name="X20TB1F" Type="X20TB1F" Version="1.0.0.0" />
   <Module Name="X20TB1F1" Type="X20TB1F" Version="1.0.0.0" />
