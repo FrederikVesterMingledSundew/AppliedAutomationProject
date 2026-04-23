@@ -14,5 +14,7 @@
   <TaskClass Name="Cyclic#8" />
   <Libraries>
     <LibraryObject Name="CppLibs" Source="Libraries.CppLibs.lby" Memory="None" Language="ANSIC" Debugging="true" />
+    <LibraryObject Name="McBase" Source="Libraries.McBase.lby" Memory="UserROM" Language="binary" Debugging="true" />
+    <LibraryObject Name="MpBase" Source="Libraries.MpBase.lby" Memory="UserROM" Language="Binary" Debugging="true" />
   </Libraries>
 </SwConfiguration>
