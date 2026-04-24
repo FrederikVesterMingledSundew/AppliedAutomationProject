@@ -7,6 +7,9 @@
   <TaskClass Name="Cyclic#4">
     <Task Name="RunBelt" Source="RunBelt.prg" Memory="UserROM" Language="ANSIC" Debugging="true" />
     <Task Name="main" Source="main.prg" Memory="UserROM" Language="IEC" Debugging="true" />
+    <Task Name="Program" Source="Program.prg" Memory="UserROM" Language="ANSIC" Debugging="true" />
+    <Task Name="packML" Source="packML.prg" Memory="UserROM" Language="IEC" Debugging="true" />
+    <Task Name="ServoTest" Source="ServoTest.prg" Memory="UserROM" Language="IEC" Debugging="true" />
   </TaskClass>
   <TaskClass Name="Cyclic#5" />
   <TaskClass Name="Cyclic#6" />
@@ -16,5 +19,6 @@
     <LibraryObject Name="CppLibs" Source="Libraries.CppLibs.lby" Memory="None" Language="ANSIC" Debugging="true" />
     <LibraryObject Name="McBase" Source="Libraries.McBase.lby" Memory="UserROM" Language="binary" Debugging="true" />
     <LibraryObject Name="MpBase" Source="Libraries.MpBase.lby" Memory="UserROM" Language="Binary" Debugging="true" />
+    <LibraryObject Name="McAxis" Source="Libraries.McAxis.lby" Memory="UserROM" Language="binary" Debugging="true" />
   </Libraries>
 </SwConfiguration>

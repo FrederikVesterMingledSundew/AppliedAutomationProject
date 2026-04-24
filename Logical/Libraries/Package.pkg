@@ -9,5 +9,6 @@
     <Object Type="Library" Language="ANSIC">CppLibs</Object>
     <Object Type="Library" Language="binary" Description="[mapp Motion] Base library">McBase</Object>
     <Object Type="Library" Language="Binary" Description="Core library for mapp components">MpBase</Object>
+    <Object Type="Library" Language="binary" Description="[mapp Motion] PLCopen axis library">McAxis</Object>
   </Objects>
 </Package>

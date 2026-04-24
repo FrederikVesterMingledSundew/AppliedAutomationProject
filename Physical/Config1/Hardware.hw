@@ -10,7 +10,7 @@
     <Parameter ID="ActivateACOPOSSimulationOnPLC" Location="DriveConfiguration/Module" Value="0" />
     <Parameter ID="ResolverPolepairs" Location="DriveConfiguration/Encoder/EncoderX6A/InterfaceType" Value="1" />
     <Parameter ID="ResolverPolepairs" Location="DriveConfiguration/Encoder/EncoderX6B/InterfaceType" Value="1" />
-    <Parameter ID="AxisReference" Location="DriveConfiguration/Channel[1]/RealAxis" Value="" />
+    <Parameter ID="AxisReference" Location="DriveConfiguration/Channel[1]/RealAxis" Value="FeederAxis" />
     <Parameter ID="MechanicalElementsIsInvisible" Location="DriveConfiguration/Channel[1]/RealAxis" Value="0" />
     <Parameter ID="InputIsReadOnly" Location="DriveConfiguration/Channel[1]/RealAxis/MechanicalElements/Gearbox" Value="0" />
     <Parameter ID="Input" Location="DriveConfiguration/Channel[1]/RealAxis/MechanicalElements/Gearbox" Value="1" />
