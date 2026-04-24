@@ -11,7 +11,7 @@ PROGRAM _CYCLIC
 	
 	Pack_ML;  // action
 	
-	
+	IO_INPUT.Distance;
 	
 END_PROGRAM
 

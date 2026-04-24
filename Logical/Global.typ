@@ -1,7 +1,7 @@
 
 TYPE
 	ST_Output : 	STRUCT 
-		PWM_PERIOD:	UINT;
+		PWM_PERIOD : UINT;
 		BELT_START : BOOL; (*I1*)
 		BELT_DIR : BOOL; (*I2*)
 		BELT_CONST_SPEED : BOOL; (*I5*)
@@ -9,7 +9,7 @@ TYPE
 		_BELT_ACC_ : INT; (*I3*)
 	END_STRUCT;
 	ST_Input : 	STRUCT 
-		Distance : UINT; (*Distance sensor on the bottom of the track*)
+		Distance : INT; (*Distance sensor on the bottom of the track*)
 	END_STRUCT;
 	packML : 
 		(

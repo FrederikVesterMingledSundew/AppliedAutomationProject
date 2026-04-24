@@ -7,8 +7,6 @@
     <Object Type="Package" Description="Global libraries">Libraries</Object>
     <Object Type="Program" Language="IEC">main</Object>
     <Object Type="Program" Language="ANSIC">RunBelt</Object>
-    <Object Type="Program" Language="IEC">packML</Object>
-    <Object Type="Program" Language="ANSIC">Program</Object>
     <Object Type="Program" Language="IEC">ServoTest</Object>
   </Objects>
 </Package>

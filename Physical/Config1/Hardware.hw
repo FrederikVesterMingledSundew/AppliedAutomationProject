@@ -132,7 +132,7 @@
     <Module Name="X1" Type="X1" Virtual="true" Version="1.15.0.0">
       <Connection Connector="SS1" TargetModule="X20TB1F" TargetConnector="SS" />
       <Connection Connector="SL" TargetModule="X20CP1382" TargetConnector="X1" />
-    <Parameter ID="X1AI_ChannelType01" Value="0 to 20mA" />
+    <Parameter ID="X1AI_ChannelType01" Value="4 to 20mA" />
   </Module>
     <Module Name="X2" Type="X2" Virtual="true" Version="1.15.0.0">
       <Connection Connector="SS1" TargetModule="X20TB1F1" TargetConnector="SS" />
