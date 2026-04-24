@@ -1,0 +1,4 @@
+VAR
+	PACK_ML : packML;
+	New_Variable : UINT;
+END_VAR

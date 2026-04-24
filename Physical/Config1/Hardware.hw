@@ -126,12 +126,14 @@
   <Module Name="8LVA13.B1030D000-0a" Type="8LVA13.B1030D000-0" Version="2.2.0.3">
     <Connection Connector="EC" TargetModule="80VD100PD.C022-01" TargetConnector="EC1" />
     <Connection Connector="MT" TargetModule="80VD100PD.C022-01" TargetConnector="MT1" />
+    <Parameter ID="MOTOR_AMB_TEMP_RATED" Location="M1/MotorParameters" Value="40" />
   </Module>
   <Module Name="X20CP1382" Type="X20CP1382" Version="1.15.0.0">
     <Module Name="X1" Type="X1" Virtual="true" Version="1.15.0.0">
       <Connection Connector="SS1" TargetModule="X20TB1F" TargetConnector="SS" />
       <Connection Connector="SL" TargetModule="X20CP1382" TargetConnector="X1" />
-    </Module>
+    <Parameter ID="X1AI_ChannelType01" Value="0 to 20mA" />
+  </Module>
     <Module Name="X2" Type="X2" Virtual="true" Version="1.15.0.0">
       <Connection Connector="SS1" TargetModule="X20TB1F1" TargetConnector="SS" />
       <Connection Connector="SL" TargetModule="X20CP1382" TargetConnector="X2" />

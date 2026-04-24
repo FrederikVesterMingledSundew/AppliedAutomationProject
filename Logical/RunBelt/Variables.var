@@ -1,0 +1,5 @@
+VAR
+	BELT_SPEED : REAL; (*Belt speed target*)
+	_BELT_CURRENT_SPEED_ : REAL; (*Current belt speed*)
+	_BELT_ACCELERATION_ : INT; (*Acceleration to belt speed target*)
+END_VAR
