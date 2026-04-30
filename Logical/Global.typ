@@ -1,5 +1,16 @@
 
 TYPE
+	ST_Output : 	STRUCT 
+		PWM_PERIOD : UINT;
+		BELT_START : BOOL; (*I1*)
+		BELT_DIR : BOOL; (*I2*)
+		BELT_CONST_SPEED : BOOL; (*I5*)
+		_BELT_DEACC_ : INT; (*I4*)
+		_BELT_ACC_ : INT; (*I3*)
+	END_STRUCT;
+	ST_Input : 	STRUCT 
+		Distance : INT; (*Distance sensor on the bottom of the track*)
+	END_STRUCT;
 	packML : 
 		(
 		EXECUTE,

@@ -1,9 +1,10 @@
 VAR_CONFIG
-	::Program:BELT_START AT %QX."X3".DigitalOutput01; (*24 VDC / 0.5 A, source To I1*)
-	::Program:BELT_DIR AT %QX."X3".DigitalOutput02; (*24 VDC / 0.5 A, source To I2*)
-	::Program:BELT_CONST_SPEED AT %QX."X3".DigitalOutput03; (*24 VDC / 0.5 A, source To I5*)
-	::Program:_BELT_ACC_ AT %QW."X3".PWMOutput09; (*Pulse width modulation, 24 VDC / 0.2 A [0 to 100.0 %] To I3*)
-	::Program:_BELT_DEACC_ AT %QW."X3".PWMOutput10; (*Pulse width modulation, 24 VDC / 0.2 A [0 to 100.0 %] To I4*)
-	::PWM_PERIOD AT %QW."X3".PWMPeriod09;
-	::PWM_PERIOD AT %QW."X3".PWMPeriod10;
+	::IO_Output.BELT_START AT %QX."X3".DigitalOutput01; (*24 VDC / 0.5 A, source To I1*)
+	::IO_Output.BELT_DIR AT %QX."X3".DigitalOutput02; (*24 VDC / 0.5 A, source To I2*)
+	::IO_Output.BELT_CONST_SPEED AT %QX."X3".DigitalOutput03; (*24 VDC / 0.5 A, source To I5*)
+	::IO_Output._BELT_ACC_ AT %QW."X3".PWMOutput09; (*Pulse width modulation, 24 VDC / 0.2 A [0 to 100.0 %] To I3*)
+	::IO_Output._BELT_DEACC_ AT %QW."X3".PWMOutput10; (*Pulse width modulation, 24 VDC / 0.2 A [0 to 100.0 %] To I4*)
+	::IO_Output.PWM_PERIOD AT %QW."X3".PWMPeriod09;
+	::IO_Output.PWM_PERIOD AT %QW."X3".PWMPeriod10;
+	::IO_INPUT.Distance AT %IW."X1".AnalogInput01;
 END_VAR

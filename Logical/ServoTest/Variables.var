@@ -1,0 +1,6 @@
+VAR
+	PowerON : MC_Power;
+	State : E_ServoStates;
+	MoveVelocity : MC_MoveVelocity;
+	ServoRun : BOOL;
+END_VAR

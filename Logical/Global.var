@@ -1,3 +1,4 @@
 VAR
-	PWM_PERIOD : UINT;
+	IO_Output : ST_Output;
+	IO_INPUT : ST_Input;
 END_VAR

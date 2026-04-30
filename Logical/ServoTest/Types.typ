@@ -1,0 +1,10 @@
+
+TYPE
+	E_ServoStates : 
+		(
+		SERVO_IDLE,
+		SERVO_POWER_ON,
+		SERVO_MOVE_VEL,
+		SERVO_POWER_OFF
+		);
+END_TYPE
