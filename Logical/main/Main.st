@@ -11,7 +11,11 @@ PROGRAM _CYCLIC
 	
 	Pack_ML;  // action
 	
-	IO_INPUT.Distance;
+	IO_Input.Distance;
+	
+	IO_Input.ROBOT_READY;
+	
+	IO_Output.ROBOT_RUN_PRG;
 	
 END_PROGRAM
 

@@ -1,4 +1,4 @@
 VAR
 	IO_Output : ST_Output;
-	IO_INPUT : ST_Input;
+	IO_Input : ST_Input;
 END_VAR

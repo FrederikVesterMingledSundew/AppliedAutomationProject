@@ -7,9 +7,11 @@ TYPE
 		BELT_CONST_SPEED : BOOL; (*I5*)
 		_BELT_DEACC_ : INT; (*I4*)
 		_BELT_ACC_ : INT; (*I3*)
+		ROBOT_RUN_PRG : BOOL;
 	END_STRUCT;
 	ST_Input : 	STRUCT 
 		Distance : INT; (*Distance sensor on the bottom of the track*)
+		ROBOT_READY : BOOL;
 	END_STRUCT;
 	packML : 
 		(
