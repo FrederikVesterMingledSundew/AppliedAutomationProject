@@ -13,9 +13,9 @@ PROGRAM _CYCLIC
 	
 	IO_Input.Distance;
 	
-	IO_Input.ROBOT_READY;
+	IO_Input.ROBOT_READY; //Kanal 601 - output på robot
 	
-	IO_Output.ROBOT_RUN_PRG;
+	IO_Output.ROBOT_RUN_PRG; //Kanal 501 - input på robot
 	
 END_PROGRAM
 
