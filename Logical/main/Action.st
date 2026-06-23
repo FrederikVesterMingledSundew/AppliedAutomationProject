@@ -19,7 +19,12 @@ ACTION States:
 			PACK_ML := EXECUTE;
 		EXECUTE:
 			
+			(*
 			
+			The belt should run. If we are in an acceptable region we should go to the position of tray and catch it with the robot.
+			This program only tells the robot to run, not where to run.
+			
+			*)
 			IF ACCEPTED_DISTANCE > ABS(ROBOT_CATCH_DISTANCE - IO_Input.Distance) THEN
 				IF IO_Input.ROBOT_READY THEN
 					IO_Output.ROBOT_RUN_PRG;
