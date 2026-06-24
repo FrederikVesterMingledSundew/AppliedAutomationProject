@@ -10,8 +10,9 @@ TYPE
 		ROBOT_RUN_PRG : BOOL;
 	END_STRUCT;
 	ST_Input : 	STRUCT 
-		Distance : INT; (*Distance sensor on the bottom of the track*)
+		_Distance : INT; (*Distance sensor on the bottom of the track*)
 		ROBOT_READY : BOOL;
+		Distance : REAL;
 	END_STRUCT;
 	packML : 
 		(

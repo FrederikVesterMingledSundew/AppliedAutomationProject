@@ -27,14 +27,22 @@ ACTION States:
 			*)
 			IF ACCEPTED_DISTANCE > ABS(ROBOT_CATCH_DISTANCE - IO_Input.Distance) THEN
 				IF IO_Input.ROBOT_READY THEN
-					IO_Output.ROBOT_RUN_PRG;
+					IO_Output.BELT_START := FALSE;
+					IO_Output.ROBOT_RUN_PRG := TRUE;
 				ELSE
 					IO_Output.BELT_START := FALSE;
 				END_IF
 			ELSE
-				IO_Output.BELT_CONST_SPEED := TRUE;
-				IO_Output.BELT_DIR := FALSE;
-				IO_Output.BELT_START := TRUE;
+				IF (ROBOT_CATCH_DISTANCE - IO_Input.Distance) > 0 THEN
+					IO_Output.BELT_CONST_SPEED := TRUE;
+					IO_Output.BELT_DIR := TRUE;
+					IO_Output.BELT_START := TRUE;
+				ELSE
+					IO_Output.BELT_CONST_SPEED := TRUE;
+					IO_Output.BELT_DIR := FALSE;
+					IO_Output.BELT_START := TRUE;
+				END_IF
+				
 			END_IF
 			
 			//PACK_ML := COMPLETING;
