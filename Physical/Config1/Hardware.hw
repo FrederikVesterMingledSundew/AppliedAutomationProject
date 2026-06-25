@@ -5,7 +5,7 @@
     <Connection Connector="PLK1" TargetModule="X20CP1382" TargetConnector="IF3" NodeNumber="1">
       <Cable Type="PowerlinkCable" Length="10" Version="1.0.0.3" />
     </Connection>
-    <Connection Connector="EC1" TargetModule="8LVA13.B1030D000-0a" TargetConnector="EC" />
+    <Connection Connector="EC1" TargetModule="8LVA13.R0030D000-0" TargetConnector="EC" />
     <Parameter ID="McAcoposTypeID" Location="DriveConfiguration/Module" Value="AcoposMicroDConfig" />
     <Parameter ID="ActivateACOPOSSimulationOnPLC" Location="DriveConfiguration/Module" Value="0" />
     <Parameter ID="ResolverPolepairs" Location="DriveConfiguration/Encoder/EncoderX6A/InterfaceType" Value="1" />
@@ -20,12 +20,12 @@
     <Parameter ID="ReferenceDistance" Location="DriveConfiguration/Channel[1]/RealAxis/MechanicalElements/RotaryToLinearTransformation" Value="1" />
     <Parameter ID="ModeIsReadOnly" Location="DriveConfiguration/Channel[1]/RealAxis/Controller" Value="0" />
     <Parameter ID="Mode" Location="DriveConfiguration/Channel[1]/RealAxis/Controller" Value="PositionController" />
-    <Parameter ID="ProportionalGain" Location="DriveConfiguration/Channel[1]/RealAxis/Controller/Mode/Position" Value="50.0" />
+    <Parameter ID="ProportionalGain" Location="DriveConfiguration/Channel[1]/RealAxis/Controller/Mode/Position" Value="50" />
     <Parameter ID="IntegrationTime" Location="DriveConfiguration/Channel[1]/RealAxis/Controller/Mode/Position" Value="0.0" />
     <Parameter ID="PredictionTime" Location="DriveConfiguration/Channel[1]/RealAxis/Controller/Mode/Position" Value="0.0004" />
     <Parameter ID="TotalDelayTime" Location="DriveConfiguration/Channel[1]/RealAxis/Controller/Mode/Position" Value="0.0004" />
     <Parameter ID="ProportionalGainIsReadOnly" Location="DriveConfiguration/Channel[1]/RealAxis/Controller/Mode/Speed" Value="0" />
-    <Parameter ID="ProportionalGain" Location="DriveConfiguration/Channel[1]/RealAxis/Controller/Mode/Speed" Value="2.0" />
+    <Parameter ID="ProportionalGain" Location="DriveConfiguration/Channel[1]/RealAxis/Controller/Mode/Speed" Value="0.5" />
     <Parameter ID="IntegrationTimeIsReadOnly" Location="DriveConfiguration/Channel[1]/RealAxis/Controller/Mode/Speed" Value="0" />
     <Parameter ID="IntegrationTime" Location="DriveConfiguration/Channel[1]/RealAxis/Controller/Mode/Speed" Value="0.0" />
     <Parameter ID="FilterTimeIsReadOnly" Location="DriveConfiguration/Channel[1]/RealAxis/Controller/Mode/Speed" Value="0" />
@@ -45,7 +45,7 @@
     <Parameter ID="DriveError" Location="DriveConfiguration/Channel[1]/RealAxis/StopReaction" Value="DecelerationLimit" />
     <Parameter ID="FilterTime" Location="DriveConfiguration/Channel[1]/RealAxis/StopReaction" Value="0.0" />
     <Parameter ID="PositionError" Location="DriveConfiguration/Channel[1]/RealAxis/MovementErrorLimits" Value="1.0" />
-    <Parameter ID="VelocityErrorMonitoring" Location="DriveConfiguration/Channel[1]/RealAxis/MovementErrorLimits" Value="Automatic1" />
+    <Parameter ID="VelocityErrorMonitoring" Location="DriveConfiguration/Channel[1]/RealAxis/MovementErrorLimits" Value="NotUsed" />
     <Parameter ID="JerkFilterIsReadOnly" Location="DriveConfiguration/Channel[1]/RealAxis" Value="0" />
     <Parameter ID="JerkFilter" Location="DriveConfiguration/Channel[1]/RealAxis" Value="NotUsed" />
     <Parameter ID="ZeroVibrationFilter" Location="DriveConfiguration/Channel[1]/RealAxis" Value="NotUsed" />
@@ -123,7 +123,7 @@
     <Parameter ID="SimulationModeOnACOPOS" Location="DriveConfiguration/Channel[2]/RealAxis/Simulation" Value="NotUsed" />
     <Parameter ID="ExternalEncoderAxis" Location="DriveConfiguration/Channel[2]" Value="NotUsed" />
   </Module>
-  <Module Name="8LVA13.B1030D000-0a" Type="8LVA13.B1030D000-0" Version="2.2.0.3">
+  <Module Name="8LVA13.R0030D000-0" Type="8LVA13.R0030D000-0" Version="2.2.0.5">
     <Connection Connector="EC" TargetModule="80VD100PD.C022-01" TargetConnector="EC1" />
     <Connection Connector="MT" TargetModule="80VD100PD.C022-01" TargetConnector="MT1" />
     <Parameter ID="MOTOR_AMB_TEMP_RATED" Location="M1/MotorParameters" Value="40" />
@@ -155,6 +155,9 @@
       <Parameter ID="InaNodeNumber" Value="0" />
     </Connector>
     <Parameter ID="ConfigurationID" Value="testFreq_Config1" />
+    <Parameter ID="Simulation" Value="1" />
+    <Parameter ID="ActivateOpcUa" Value="1" />
+    <Parameter ID="OpcUaInformationModels_PV_Version" Value="1" />
   </Module>
   <Module Name="X20TB1F" Type="X20TB1F" Version="1.0.0.0" />
   <Module Name="X20TB1F1" Type="X20TB1F" Version="1.0.0.0" />

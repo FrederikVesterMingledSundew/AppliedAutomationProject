@@ -3,4 +3,11 @@ VAR
 	State : E_ServoStates;
 	MoveVelocity : MC_MoveVelocity;
 	ServoRun : BOOL;
+	StopMotion : MC_Stop;
+	ResetDrive : MC_Reset;
+	Home : MC_Home;
+	TestVelocity : REAL := 100.0;
+	ResetServo : BOOL;
+	ErrorState : STRING[80];
+	Feeder : FB_ServoControl;
 END_VAR

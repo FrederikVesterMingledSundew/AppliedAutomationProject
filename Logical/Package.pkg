@@ -8,5 +8,6 @@
     <Object Type="Program" Language="IEC">main</Object>
     <Object Type="Program" Language="ANSIC">RunBelt</Object>
     <Object Type="Program" Language="IEC">ServoTest</Object>
+    <Object Type="Package">mappView</Object>
   </Objects>
 </Package>

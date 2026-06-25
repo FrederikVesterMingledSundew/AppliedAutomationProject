@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Content id="control_content" height="120" width="1720" xmlns="http://www.br-automation.com/iat2015/contentDefinition/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Widgets>
+    <Widget xsi:type="widgets.brease.MomentaryPushButton" id="Start_Button" top="0" left="0" width="200" height="70" zIndex="0" text="START" fontSize="24px" margin="25px" />
+    <Widget xsi:type="widgets.brease.MomentaryPushButton" id="Stop_Button" top="0" left="225" width="200" height="70" zIndex="1" text="STOP" fontSize="24px" margin="25px" />
+    <Widget xsi:type="widgets.brease.MomentaryPushButton" id="Reset_Button" top="0" left="1470" width="200" height="70" zIndex="2" text="RESET" fontSize="24px" margin="25px" />
+  </Widgets>
+</Content>

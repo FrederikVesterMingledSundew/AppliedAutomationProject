@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Content id="nav_content" height="1080" width="200" xmlns="http://www.br-automation.com/iat2015/contentDefinition/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Widgets>
+    <Widget xsi:type="widgets.brease.NavigationBar" id="NavigationBar1" top="0" left="0" width="200" height="1080" zIndex="0">
+      <Widgets>
+        <Widget xsi:type="widgets.brease.NavigationButton" id="NavBtn_Main" top="100" left="0" width="200" height="100" zIndex="0" pageId="main_page" text="HOME" backColor="rgba(219, 219, 219, 0)" borderColor="rgba(219, 219, 219, 0)" textColor="rgba(225, 225, 225, 1)" fontSize="24px" bold="true" padding="0px 0px" margin="0px" checkedBackColor="rgba(255, 169, 55, 1)" checkedBorderColor="rgba(253, 123, 1, 0)" />
+        <Widget xsi:type="widgets.brease.NavigationButton" id="NavBtn_Disp" top="200" left="0" width="200" height="100" zIndex="1" pageId="disp_page" text="DISP" backColor="rgba(219, 219, 219, 0)" borderColor="rgba(219, 219, 219, 0)" textColor="rgba(225, 225, 225, 1)" fontSize="24px" bold="true" padding="0px 0px" margin="0px" checkedBackColor="rgba(255, 169, 55, 1)" checkedBorderColor="rgba(253, 123, 1, 0)" />
+      </Widgets>
+    </Widget>
+  </Widgets>
+</Content>

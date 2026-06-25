@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<vdef:Visualization id="vis_2" autoUpdate="true" xmlns:vdef="http://www.br-automation.com/iat2015/visualizationDefinition/v2">
+  <StartPage pageRefId="main_page" />
+  <Pages>
+    <Page refId="main_page" />
+    <Page refId="disp_page" />
+  </Pages>
+  <Navigations />
+  <BindingsSets />
+  <EventBindingsSets />
+  <Dialogs />
+  <Contents>
+    <Content refId="nav_content" />
+    <Content refId="control_content" />
+    <Content refId="main_body" />
+    <Content refId="disp_body" />
+  </Contents>
+  <SnippetsSets />
+  <VariablesSets />
+  <ExpressionsSets />
+  <Configurations>
+    <Configuration key="activityCount" value="false" />
+    <Gestures>
+      <!--<SystemGesture1 touchPoints="2" />
+		  <SystemGesture2 touchPoints="2" />
+		  <SystemGesture3 touchPoints="2" />-->
+    </Gestures>
+    <VirtualKeyboards>
+      <!--<InputProcessing onKeyDown="true" />-->
+    </VirtualKeyboards>
+  </Configurations>
+</vdef:Visualization>
