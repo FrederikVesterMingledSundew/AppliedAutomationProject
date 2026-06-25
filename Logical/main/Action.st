@@ -22,7 +22,7 @@ ACTION States:
 			(*
 			
 			The belt should run. If we are in an acceptable region we should go to the position of tray and catch it with the robot.
-			This program only tells the robot to run, not where to run.
+			This program only tells the robot TO run, not where TO run.
 			
 			*)
 			IF ACCEPTED_DISTANCE > ABS(ROBOT_CATCH_DISTANCE - IO_Input.Distance) THEN
@@ -31,8 +31,11 @@ ACTION States:
 					IO_Output.ROBOT_RUN_PRG := TRUE;
 				ELSE
 					IO_Output.BELT_START := FALSE;
+					IO_Output.ROBOT_RUN_PRG := FALSE;
 				END_IF
 			ELSE
+				IO_Output.ROBOT_RUN_PRG := FALSE;
+				
 				IF (ROBOT_CATCH_DISTANCE - IO_Input.Distance) > 0 THEN
 					IO_Output.BELT_CONST_SPEED := TRUE;
 					IO_Output.BELT_DIR := TRUE;
