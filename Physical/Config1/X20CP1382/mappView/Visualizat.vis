@@ -6,7 +6,10 @@
     <Page refId="disp_page" />
   </Pages>
   <Navigations />
-  <BindingsSets />
+  <BindingsSets>
+    <BindingsSet refId="main_body_binding" />
+    <BindingsSet refId="control_content_binding" />
+  </BindingsSets>
   <EventBindingsSets />
   <Dialogs />
   <Contents>

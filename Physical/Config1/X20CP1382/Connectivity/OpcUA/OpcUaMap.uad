@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio FileVersion="4.9"?>
+<OpcUaSource FileVersion="9" ArVersion="I4.83">
+  <Aliases>
+    <ACLAliases />
+    <EURangeViolationAliases />
+    <EURangesAliases />
+    <EngineeringUnitAliases />
+  </Aliases>
+  <DefaultView>
+    <Module Name="&lt;Default&gt;">
+      <Task Name="ServoTest">
+        <Variable Name="HMI_FeederVelocity" />
+        <Variable Name="HMI_Reset" />
+        <Variable Name="HMI_Start" />
+        <Variable Name="HMI_Stop" />
+        <Variable Name="HMI_FeederDir" />
+      </Task>
+    </Module>
+  </DefaultView>
+</OpcUaSource>

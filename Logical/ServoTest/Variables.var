@@ -1,5 +1,6 @@
 VAR
 	PowerON : MC_Power;
+	HMI_FeederVelocity : STRING[80];
 	State : E_ServoStates;
 	MoveVelocity : MC_MoveVelocity;
 	ServoRun : BOOL;
@@ -10,4 +11,8 @@ VAR
 	ResetServo : BOOL;
 	ErrorState : STRING[80];
 	Feeder : FB_ServoControl;
+	HMI_Stop : BOOL;
+	HMI_Reset : BOOL;
+	HMI_Start : BOOL;
+	HMI_FeederDir : BOOL;
 END_VAR

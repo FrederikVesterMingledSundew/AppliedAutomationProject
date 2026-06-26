@@ -1,31 +1,45 @@
 
 PROGRAM _INIT
 	(* Insert code here *)
+	PowerON.Axis := ADR( FeederAxis );
+	Home.Axis := ADR ( FeederAxis );
+	MoveVelocity.Axis := ADR( FeederAxis );
+	StopMotion.Axis := ADR( FeederAxis );
+	ResetDrive.Axis := ADR( FeederAxis );
 	
-	//MoveVelocity.Acceleration := 1.0;
-	//MoveVelocity.Deceleration := 10.0;
+	MoveVelocity.Acceleration := 1.0;
+	MoveVelocity.Deceleration := 1.0;
 	 
 END_PROGRAM
 
 PROGRAM _CYCLIC
 	(* Insert code here *)
 	
-	Feeder.Axis := ADR( FeederAxis );
+	(*Feeder.Axis := ADR( FeederAxis );
 	Feeder.Enable := TRUE;
-	Feeder();
+	Feeder.Velocity := STRING_TO_REAL( HMI_FeederVelocity );
+	Feeder();*)
 	
-	(*CASE State OF 
+	IF HMI_Stop AND State = SERVO_MOVE_VEL THEN
+		State := SERVO_STOP;
+	END_IF
+	
+	IF HMI_Reset THEN
+		State := SERVO_RESET;
+	END_IF
+	
+	CASE State OF 
 		
 		SERVO_IDLE:
 			
-			IF ServoRun THEN
+			IF HMI_Start THEN
 				ServoRun := FALSE;
 				State := SERVO_POWER_ON;
 			END_IF
 		
 		SERVO_POWER_ON:
 			
-			PowerON.Axis := ADR( FeederAxis );
+			
 			PowerON.Enable := TRUE;
 			PowerON();
 			
@@ -36,7 +50,6 @@ PROGRAM _CYCLIC
 		
 		SERVO_HOMING:
 			
-			Home.Axis := ADR ( FeederAxis );
 			Home.Position := 0;
 			Home.Execute := TRUE;
 			Home();
@@ -52,9 +65,18 @@ PROGRAM _CYCLIC
 			
 		SERVO_MOVE_VEL:
 		
-			MoveVelocity.Axis := ADR( FeederAxis );
-			MoveVelocity.Velocity := TestVelocity;
-			MoveVelocity.Execute := TRUE;
+			
+			IF MoveVelocity.Velocity <> STRING_TO_REAL( HMI_FeederVelocity ) THEN
+				MoveVelocity.Execute := FALSE;
+				MoveVelocity.Velocity := STRING_TO_REAL( HMI_FeederVelocity );
+			ELSE
+				MoveVelocity.Execute := TRUE;
+			END_IF
+			IF HMI_FeederDir THEN
+				MoveVelocity.Direction := mcDIR_NEGATIVE;
+			ELSE
+				MoveVelocity.Direction := mcDIR_POSITIVE;
+			END_IF
 			MoveVelocity();
 		
 			IF MoveVelocity.Error THEN
@@ -65,13 +87,12 @@ PROGRAM _CYCLIC
 		
 		SERVO_STOP:
 			
-			MoveVelocity.Execute := FALSE;
-			StopMotion.Axis := ADR( FeederAxis );
+			MoveVelocity( Execute := FALSE );
 			StopMotion.Execute := TRUE;
 			StopMotion();
 			
 			IF StopMotion.Done THEN
-				StopMotion.Execute := FALSE;
+				StopMotion( Execute := FALSE );
 				State := SERVO_IDLE;
 			END_IF
 		
@@ -85,13 +106,14 @@ PROGRAM _CYCLIC
 		
 		SERVO_RESET:
 		
-			ResetDrive.Axis := ADR( FeederAxis );
+			MoveVelocity( Execute := FALSE );
+			
 			ResetDrive.Execute := TRUE;
 			ResetDrive();
 		
 			IF ResetDrive.Done THEN
 				ResetDrive( Execute := FALSE );
-				State := SERVO_IDLE;
+				State := SERVO_POWER_OFF;
 			END_IF
 		
 		SERVO_ERROR:
@@ -103,7 +125,7 @@ PROGRAM _CYCLIC
 			END_IF
 		
 		
-	END_CASE*)
+	END_CASE
 	 
 END_PROGRAM
 

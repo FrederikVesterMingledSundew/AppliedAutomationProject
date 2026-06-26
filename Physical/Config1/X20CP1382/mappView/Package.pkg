@@ -4,5 +4,7 @@
   <Objects>
     <Object Type="File">Config.mappviewcfg</Object>
     <Object Type="File">Visualizat.vis</Object>
+    <Object Type="File">main_body.binding</Object>
+    <Object Type="File">control_content.binding</Object>
   </Objects>
 </Package>

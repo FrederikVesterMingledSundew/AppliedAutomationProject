@@ -3,7 +3,7 @@
 <Configuration>
   <Element ID="FeederAxis" Type="axis">
     <Property ID="BaseTypeIsReadOnly" Value="0" />
-    <Selector ID="BaseType" Value="LinearBounded">
+    <Selector ID="BaseType" Value="Linear">
       <Property ID="MeasurementUnit" Value="5066068" />
       <Property ID="MeasurementResolutionIsReadOnly" Value="0" />
       <Property ID="MeasurementResolution" Value="0.01" />

@@ -6,6 +6,7 @@
         <Widget xsi:type="widgets.brease.DropDownBox" id="selector_caps_speed" top="75" left="0" width="90" height="40" zIndex="0" dataProvider="[{'value':'0','text':'0'},{'value':'1','text':'1'},{'value':'2','text':'2'},{'value':'3','text':'3'},{'value':'4','text':'4'},{'value':'5','text':'5'},{'value':'6','text':'6'},{'value':'7','text':'7'},{'value':'8','text':'8'},{'value':'9','text':'9'},{'value':'10','text':'10'}]" selectedValue="0" margin="15px" showOpenIndicator="true" fontSize="14px" />
         <Widget xsi:type="widgets.brease.Label" id="Label1" top="45" left="0" width="270" zIndex="1" text="Speed (caps)" bold="true" padding="0px" margin="15px" />
         <Widget xsi:type="widgets.brease.Label" id="Label2" top="0" left="0" width="270" zIndex="2" text="Feeder" fontSize="26px" bold="true" padding="0px" margin="15px 15px" />
+        <Widget xsi:type="widgets.brease.CheckBox" id="CheckBox1" top="139" left="14" zIndex="3" text="Invert Direction" />
       </Widgets>
     </Widget>
   </Widgets>
