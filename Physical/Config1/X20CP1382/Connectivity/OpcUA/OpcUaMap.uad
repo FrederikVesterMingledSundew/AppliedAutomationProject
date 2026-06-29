@@ -9,6 +9,23 @@
   </Aliases>
   <DefaultView>
     <Module Name="&lt;Default&gt;">
+      <GlobalVariables Name="Global Variables">
+        <Variable Name="IO_Output">
+          <Variable Name="ROBOT_RUN_PRG" />
+          <Variable Name="BELT_START" />
+          <Variable Name="BELT_DIR" />
+          <Variable Name="BELT_CONST_SPEED" />
+        </Variable>
+        <Variable Name="IO_Input">
+          <Variable Name="ROBOT_READY">
+            <NodeDescription>
+              <DisplayName>RobotIsReady</DisplayName>
+              <Description>Is the robot ready?</Description>
+            </NodeDescription>
+          </Variable>
+          <Variable Name="Distance" />
+        </Variable>
+      </GlobalVariables>
       <Task Name="ServoTest">
         <Variable Name="HMI_FeederVelocity" />
         <Variable Name="HMI_Reset" />
@@ -16,6 +33,11 @@
         <Variable Name="HMI_Stop" />
         <Variable Name="HMI_FeederDir" />
       </Task>
+      <Task Name="main">
+        <Variable Name="PackMLChar" />
+        <Variable Name="PACK_ML" />
+      </Task>
+      <Task Name="RunBelt" />
     </Module>
   </DefaultView>
 </OpcUaSource>

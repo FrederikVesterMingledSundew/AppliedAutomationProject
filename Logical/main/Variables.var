@@ -1,3 +1,4 @@
 VAR
 	PACK_ML : packML;
+	PackMLChar : STRING[80];
 END_VAR

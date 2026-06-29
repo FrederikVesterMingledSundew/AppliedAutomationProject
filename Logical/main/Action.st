@@ -2,23 +2,39 @@
 ACTION States: 
 	CASE PACK_ML OF
 		ABORTING:
+			PackMLChar := 'ABORTING';
 			PACK_ML := ABORTED;
+
 		ABORTED:
+			PackMLChar := 'ABORTED';
 			PACK_ML := CLEARING;
+
 		CLEARING:
+			PackMLChar := 'CLEARING';
 			PACK_ML := STOPPED;
+
 		STOPPING:
+			PackMLChar := 'STOPPING';
 			PACK_ML := ABORTED;
+
 		STOPPED:
+			PackMLChar := 'STOPPED';
 			PACK_ML := RESETTING;
+
 		RESETTING:
+			PackMLChar := 'RESETTING';
 			PACK_ML := IDLE;
+
 		IDLE:
+			PackMLChar := 'IDLE';
 			PACK_ML := STARTING;
-		STARTING:
-			PACK_ML := EXECUTE;
-		EXECUTE:
 			
+		STARTING:
+			PackMLChar := 'STARTING';
+			PACK_ML := EXECUTE;
+			
+		EXECUTE:
+			PackMLChar := 'EXECUTE';
 			(*
 			
 			The belt should run. If we are in an acceptable region we should go to the position of tray and catch it with the robot.
@@ -50,20 +66,36 @@ ACTION States:
 			
 			//PACK_ML := COMPLETING;
 		SUSPENDING:
+			PackMLChar := 'SUSPENDING';
 			PACK_ML := SUSPENDED;
+			
 		SUSPENDED:
+			PackMLChar := 'SUSPENDED';
 			PACK_ML := UNSUSPENDING;
+
 		UNSUSPENDING:
+			PackMLChar := 'UNSUSPENDING';
 			PACK_ML := EXECUTE;
+
 		HOLDING:
+			PackMLChar := 'HOLDING';
 			PACK_ML := HELD;
+
 		HELD:
+			PackMLChar := 'HELD';
 			PACK_ML := UNHOLDING;
+
 		UNHOLDING:
+			PackMLChar := 'UNHOLDING';
 			PACK_ML := EXECUTE;
+
 		COMPLETING:
+			PackMLChar := 'COMPLETING';
 			PACK_ML := COMPLETED;
+
 		COMPLETED:
+			PackMLChar := 'COMPLETED';
 			PACK_ML := RESETTING;
+
 	END_CASE
 END_ACTION
